@@ -4,9 +4,6 @@ import { todoListStatsState } from '../../atoms';
 
 export const TodoListStats = () => {
   const test = useRecoilValue(todoListStatsState);
-
-  console.log(test, 'da test');
-
   const {
     totalItems,
     totalItemsCompleted,

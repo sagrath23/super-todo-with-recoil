@@ -9,6 +9,7 @@ import { TodoListStats } from '../TodoListStats/TodoListStats';
 
 export const TodoList = () => {
   // useRecoilValue hook allow us to consume an atom state (or derived state) inside of a component
+  // for read-only operations
   const list = useRecoilValue(filteredTodoListState);
 
   return (

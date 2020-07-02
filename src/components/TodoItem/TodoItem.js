@@ -4,6 +4,7 @@ import { useRecoilState } from 'recoil';
 import { todoListState } from '../../atoms';
 
 export const TodoItem = ({ item: { id, text, isComplete } }) => {
+  // useRecoilState hook allow us to consume an atom state in read / write mode
   const [todoList, setTodoList] = useRecoilState(todoListState);
   const index = todoList.findIndex((item) => item.id === id);
   const editItemText = ({ target: { value }}) => {
@@ -22,10 +23,6 @@ export const TodoItem = ({ item: { id, text, isComplete } }) => {
       text,
       isComplete: !isComplete
     };
-
-    console.log(modifiedItem, 'new Item');
-    // TODO: check why this doesn't update atom
-
     const newList = replaceItemAtIndex(todoList, index, modifiedItem);
 
     setTodoList(newList);
