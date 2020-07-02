@@ -34,14 +34,14 @@ export const TodoItem = ({ item: { id, text, isComplete } }) => {
 
   return (
     <div>
-        <input type="text" value={text} onChange={editItemText} />
-        <input
-          type="checkbox"
-          checked={isComplete}
-          onChange={toggleItemCompletion}
-        />
-        <button onClick={deleteItem}>X</button>
-      </div>
+      <input type="text" value={text} onChange={editItemText} />
+      <input
+        type="checkbox"
+        checked={isComplete}
+        onChange={toggleItemCompletion}
+      />
+      <button onClick={deleteItem}>X</button>
+    </div>
   );
 };
 
