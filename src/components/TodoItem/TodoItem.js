@@ -22,6 +22,10 @@ export const TodoItem = ({ item: { id, text, isComplete } }) => {
       text,
       isComplete: !isComplete
     };
+
+    console.log(modifiedItem, 'new Item');
+    // TODO: check why this doesn't update atom
+
     const newList = replaceItemAtIndex(todoList, index, modifiedItem);
 
     setTodoList(newList);

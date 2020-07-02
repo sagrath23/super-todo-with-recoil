@@ -4,6 +4,7 @@ import { TodoListFilters } from '../TodoListFilters';
 import { TodoItem } from '../TodoItem';
 import { filteredTodoListState } from '../../atoms';
 import { TodoItemCreator } from '../TodoItemCreator';
+import { TodoListStats } from '../TodoListStats/TodoListStats';
 
 
 export const TodoList = () => {
@@ -13,6 +14,7 @@ export const TodoList = () => {
   return (
     <>
       <TodoListFilters />
+      <TodoListStats />
       <TodoItemCreator />
       {list.map((item) => (
         <TodoItem key={item.id} item={item} />
