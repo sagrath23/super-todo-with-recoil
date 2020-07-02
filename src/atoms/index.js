@@ -33,9 +33,6 @@ export const todoListStatsState = selector({
   get: ({ get }) => {
     const list = get(todoListState);
     const totalItems = list.length;
-
-    console.log(totalItems, 'count');
-
     const totalItemsCompleted = list.filter(({ isComplete }) => isComplete).length;
     const totalItemsUncompleted = list.filter(({ isComplete }) => !isComplete).length;
     const completionPercent = totalItems === 0 ? 0 : totalItemsCompleted / totalItems;
